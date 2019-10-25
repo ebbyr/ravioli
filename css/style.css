@@ -1,0 +1,292 @@
+html {
+	box-sizing: border-box;
+	font-family: arial, helvetica, sans-serif;
+}
+
+body {
+	background:#F7F0EC;
+	line-height: 1.4;
+	color: white;
+}
+
+.logo {
+	width: 3rem;
+    padding: 1em;
+}
+
+/*Knapp längst upp i högra hörnet*/
+header .btn {
+text-align: start; 
+background:#DF7F2A;
+color: #FFF;
+padding: 0.6rem 1.3rem;
+text-decoration: none;
+border: 0;
+justify-content: left;
+font-size:20px;
+margin:20px;
+text-align:center;
+}
+
+
+/*Knapp nedanför "Expect a better tomorrow" */
+section .btn {
+background:#DF7F2A;
+color: white;
+padding: 0.6rem 1.3rem;
+text-decoration: none;
+border: 0;
+position: absolute;
+top: 67%;
+transform: translateY(50%);
+
+}
+
+.wrapper {
+display: grid;
+grid-gap: 0px;
+grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+grid-template-areas: "header header header header"
+	                     "nav nav nav nav"
+	                     "showcase showcase showcase showcase";
+
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 5fr 1fr 1fr;
+	grid-template-areas: "img h3 a";
+}
+
+#kontakt {
+   text-align: end;
+   margin-right: 1em;
+   font-size:1em;
+   color:#000;
+}
+
+.nav {
+	grid-area: nav;
+	border-style: solid none solid none;
+	border-color:#000;
+	border-width: 0.1rem;
+}
+
+/*Styr positionen på navigeringsmenyn*/
+.nav ul {
+	display: grid;
+	grid-gap: 20px;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(4, 1fr)
+
+}
+
+/*Styr utseendet på navigeringsmenyn*/
+.nav a {
+	text-decoration: none;
+	display: block;
+	padding: 0.8rem;
+	text-align: center;
+	font-size: 1.1rem;
+	color: #000;
+	font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+.showcase {
+	grid-area: showcase;
+	min-height: 500px;
+	background: url(https://image.freepik.com/free-photo/bartender-putting-fire-big-ice-cube-tweezers-steel-shaker_130488-423.jpg);
+    background-size: cover;
+    padding: 3rem;
+}
+
+.showcase h1 {
+font-size: 3rem;
+margin-top: 0;
+position: absolute;
+top: 50%;
+transform: translateY(50%);
+}
+   
+
+.showcase p {
+font-size: 1.3rem;
+margin-bottom: 0;
+position: absolute;
+top: 43%;
+transform: translateY(50%);   
+}
+
+
+/************************** CSS FÖR SIDAN ABOUT.HTML ****************************************/
+
+.showcase-about{
+	grid-area: showcase;
+	min-height: 500px;
+	background: url(https://image.freepik.com/free-photo/bartender-putting-fire-big-ice-cube-tweezers-steel-shaker_130488-423.jpg);
+    background-size: cover;
+    padding: 3rem;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". article ."
+}
+
+.showcase-about h2{
+	color:#FFF;
+	text-align:center;
+	font-size:40px;
+
+}
+
+.showcase-about article {
+	grid-area: article;
+	margin-top: 2em;
+}
+
+#about-text p {
+	grid-area: article;
+	margin-top: 2em;
+	color:#FFF;
+	text-align:left;
+	
+}
+
+
+/************************** CSS FÖR SIDAN MENU.HTML ****************************************/
+
+
+
+.showcase-menu{
+	grid-area: showcase;
+	display: grid;
+	grid-template-areas: ". menu-list ."
+	                     ". menu1 ."
+	                     ". menu2 ."
+	                     ". menu3 .";
+	min-height: 700px;
+    background-color: #dea776;
+    padding: 3rem;}
+
+.showcase-menu h1{
+	color:#FFF;
+	text-align:center;
+	position:relative;
+	top:70px;	
+	font-size:30px;
+	letter-spacing: 1px;
+	padding:10px;
+}
+
+.showcase-menu img {
+	height: 650px;
+	margin: 3em;
+}
+
+#menu-list {
+	grid-area: menu-list;
+	margin-top: 150px;
+	margin-bottom: 500px;
+}
+
+#menu1 {
+	grid-area: menu1;
+	background-color: #FFF;
+}
+
+#menu2 {
+	grid-area: menu2;
+	background-color: #F7F0EC;
+}
+
+#menu3 {
+	grid-area: menu3;
+	background-color: #FFF;
+}
+
+#menu1 h1, #menu2 h1, #menu3 h1 {
+ 	color: black;
+ }
+
+.showcase-menu a:hover {
+  background-color: #0000;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+#menu-list h1 a {
+text-decoration: none;
+color: white;
+}
+
+
+/************************** CSS FÖR SIDAN KONTAKT.HTML ****************************************/
+.contact-page {
+	grid-area: showcase;
+	background-color: #dea776;
+	padding: 2rem;
+}
+
+.contact-page h1 {
+	text-align: center;
+	color: black;
+	font-size: 3em;
+}
+
+.contact-page p {
+	text-align: center;
+	margin: 3em;
+}
+
+form {
+	max-width: 500px;
+	margin: 2rem auto;
+}
+
+form label {
+	display: block;
+	color: black;
+	padding: 1rem 0 0.5rem 0;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+input, textarea {
+	display: block;
+	width: 100%;
+	border: 2px solid orange;
+	padding: 0.5rem;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+#skickaBtn {
+	border: 0;
+	background-color: #DF7F2A;
+	padding: 0.5rem;
+	color: black;
+	margin: 1rem 0;
+	width: auto;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#skickaBtn:hover {
+	background-color: white;
+}
+
+/*.contact-us p {
+	text-align: center;
+	height: 60px;
+	top: 50px;
+}
+
+.showcase-contact{
+	grid-area: showcase;
+	min-height: 700px;
+	/*background: url(https://image.freepik.com/free-photo/bartender-putting-fire-big-ice-cube-tweezers-steel-shaker_130488-423.jpg);
+    background-size: cover;*/
+   /* background-color: #dea776;
+    padding: 3rem;}*/
